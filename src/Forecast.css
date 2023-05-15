@@ -1,0 +1,33 @@
+.row {
+  position: relative;
+  bottom: 350px;
+}
+.col-2 {
+  text-align: center;
+  border: 1px solid #ffe79a;
+
+  border-radius: 4px;
+
+  background-color: transparent;
+  color: #ffe79a;
+  padding: 52px;
+  font-size: 24px;
+}
+.col-2:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
+  background-color: #ffe79a;
+  color: #212121;
+}
+.forcastDay {
+  padding-bottom: 10px;
+  font-size: 24px;
+  opacity: 90%;
+  letter-spacing: 1px;
+}
+.forcastTemperature {
+  padding-top: 15px;
+  font-size: 20px;
+  opacity: 80%;
+  letter-spacing: 2px;
+}

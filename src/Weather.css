@@ -1,0 +1,92 @@
+h1 {
+  text-transform: capitalize;
+}
+h2 {
+  position: relative;
+  top: -170px;
+  right: -320px;
+  font-size: 12px;
+  max-width: 300px;
+  border: 1px solid #ffe79a;
+  border-radius: 50%;
+  text-align: center;
+  padding: 15px 10px 50px 10px;
+}
+form {
+  width: 200px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.search-button {
+  border-radius: 4px;
+  background-color: #ffe79a;
+  color: #212121;
+  transition: all 100ms ease-in;
+  position: relative;
+  left: 200px;
+  bottom: 30px;
+}
+.search-button:hover {
+  background-color: #212121;
+  color: #ffe79a;
+}
+.timeNplace {
+  position: relative;
+  top: 50px;
+  padding-left: 20px;
+}
+.timeNplace p {
+  line-height: 8px;
+}
+.enterCity {
+  background-color: #ffe79a;
+}
+h2 {
+  position: relative;
+  top: -170px;
+  right: -320px;
+  font-size: 16px;
+  max-width: 300px;
+  border: 1px solid #ffe79a;
+  border-radius: 50%;
+  text-align: center;
+  padding: 15px 10px 50px 10px;
+}
+.celsius-temp {
+  font-weight: lighter;
+}
+.description {
+  font-size: 12px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+.location-button {
+  transition: all 150ms ease ease-in-out;
+  color: #212121;
+  background-color: #ffe79a;
+  border-radius: 4px;
+  position: relative;
+  top: 80px;
+  left: 20px;
+  opacity: 70%;
+}
+.location-button:hover {
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffe79a;
+}
+.elements {
+  text-align: center;
+  position: relative;
+  bottom: 130px;
+  margin: 0 auto;
+  padding: 5px;
+  line-height: 24px;
+  border-radius: 8px;
+  background-color: #212121;
+  color: #ffe79a;
+  display: block;
+  width: 300px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}

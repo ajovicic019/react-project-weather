@@ -1,0 +1,28 @@
+.card {
+  width: 10rem;
+  height: 18rem;
+  transition: all 150ms ease-in-out;
+  position: relative;
+  left: 750px;
+  bottom: 460px;
+  color: #212121;
+  background-color: #ffe79a;
+}
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffe79a;
+}
+.card-img-top {
+  height: 10rem;
+}
+a {
+  color: #ffe79a;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffe79a;
+  opacity: 50%;
+  text-decoration: underline;
+}
