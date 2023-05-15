@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import CurrentDate from "./CurrentDate";
 import "./Weather.css";
 
 export default function Weather() {
+  const [city, setCity] = useState("Belgrade");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  function displayCity(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+  }
+
   return (
     <div className="Weather">
       <div className="timeNplace">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Enter a city:</label>
           <input
             type="text"
@@ -13,12 +25,13 @@ export default function Weather() {
             autoComplete="off"
             autoFocus="on"
             className="enterCity"
+            onChange={displayCity}
           />
           <input type="submit" name="search" className="search-button" />
         </form>
 
-        <h1>weatherData.city</h1>
-        <p>weatherData.date</p>
+        <h1>{city}</h1>
+        <CurrentDate />
       </div>
       <div className="LocationButton">
         <button className="location-button">Current Location</button>
