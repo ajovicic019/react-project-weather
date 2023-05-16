@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Currentdate() {
   let now = new Date();
-  console.log(now);
+
   let days = [
     "Sunday",
     "Monday",
