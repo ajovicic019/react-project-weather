@@ -9,6 +9,7 @@ export default function Weather() {
 
   function displayWeather(response) {
     setWeather({
+      city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -19,9 +20,11 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeather);
+    if (city.length > 0) {
+      let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(displayWeather);
+    }
   }
 
   function displayCity(event) {
@@ -44,7 +47,7 @@ export default function Weather() {
           <input type="submit" name="search" className="search-button" />
         </form>
 
-        <h1>{city}</h1>
+        <h1>{weather.city}</h1>
         <CurrentDate />
       </div>
       <div className="LocationButton">

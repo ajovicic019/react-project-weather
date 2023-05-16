@@ -1,5 +1,7 @@
 h1 {
   text-transform: capitalize;
+
+  width: 200px;
 }
 h2 {
   position: relative;
