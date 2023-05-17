@@ -5,14 +5,14 @@ h1,
   line-height: 8px;
 }
 .text {
-  font-size: 48px;
+  font-size: 36px;
 }
 h2 {
   margin: 30px;
   border: 1px solid #ffe79a;
   border-radius: 50%;
   text-align: center;
-  padding: 10px 5px 25px 5px;
+  padding: 15px 15px 30px 15px;
 }
 .text-h2 {
   font-size: 48px;
