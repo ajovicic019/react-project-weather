@@ -2,6 +2,7 @@
   width: 10rem;
   height: 18rem;
   margin: 20px 20px 20px 80px;
+  transition: all 200ms ease-in-out;
 }
 .card-body {
   background-color: #ffe79a;
