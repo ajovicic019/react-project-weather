@@ -1,57 +1,22 @@
 import React from "react";
+import axios from "axios";
 import "./Forecast.css";
 export default function Forecast() {
-  let weatherData = {
-    days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-    img: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-    minTemp: 10,
-    maxTemp: 25,
-    description: "Partly cloudy",
-  };
+  let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
+  let apiUrl = `api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForcast);
+
+  function displayForcast(coord) {
+    console.log(coord);
+  }
+
   return (
     <div className="Forecast">
       <div className="row">
         <div className="col-2">
-          <div className="forcastDay">{weatherData.days[5]}</div>
-          <img src={weatherData.img} alt="{weatherData.description}" />
-          <div className="forcastTemperature">
-            {weatherData.minTemp}°-{weatherData.maxTemp}°
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forcastDay">{weatherData.days[6]}</div>
-          <img src={weatherData.img} alt="{weatherData.description}" />
-          <div className="forcastTemperature">
-            {weatherData.minTemp}°-{weatherData.maxTemp}°
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forcastDay">{weatherData.days[0]}</div>
-          <img src={weatherData.img} alt="{weatherData.description}" />
-          <div className="forcastTemperature">
-            {weatherData.minTemp}°-{weatherData.maxTemp}°
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forcastDay">{weatherData.days[1]}</div>
-          <img src={weatherData.img} alt="{weatherData.description}" />
-          <div className="forcastTemperature">
-            {weatherData.minTemp}°-{weatherData.maxTemp}°
-          </div>
-        </div>{" "}
-        <div className="col-2">
-          <div className="forcastDay">{weatherData.days[2]}</div>
-          <img src={weatherData.img} alt="{weatherData.description}" />
-          <div className="forcastTemperature">
-            {weatherData.minTemp}°-{weatherData.maxTemp}°
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forcastDay">{weatherData.days[3]}</div>
-          <img src={weatherData.img} alt="{weatherData.description}" />
-          <div className="forcastTemperature">
-            {weatherData.minTemp}°-{weatherData.maxTemp}°
-          </div>
+          <div className="forcastDay">Thu</div>
+          <img src="/" alt="w" />
+          <div className="forcastTemperature">min°-max°</div>
         </div>
       </div>
     </div>
