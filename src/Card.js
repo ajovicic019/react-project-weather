@@ -1,6 +1,6 @@
 import React from "react";
-import "./Card.css";
 import Image from "./images/forest2.jpg";
+import "./Card.css";
 
 export default function Card() {
   return (

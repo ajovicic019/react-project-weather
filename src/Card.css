@@ -1,12 +1,11 @@
 .card {
   width: 10rem;
   height: 18rem;
-  transition: all 150ms ease-in-out;
-  position: relative;
-  left: 750px;
-  bottom: 460px;
-  color: #212121;
+  margin: 20px 20px 20px 80px;
+}
+.card-body {
   background-color: #ffe79a;
+  color: #212121;
 }
 .card:hover {
   transform: scale(1.1);
@@ -20,6 +19,7 @@
 a {
   color: #ffe79a;
   text-decoration: none;
+  font-weight: bolder;
 }
 a:hover {
   color: #ffe79a;

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
+import Card from "./Card";
+
 import "./Weather.css";
 
 export default function Weather() {
@@ -33,40 +35,43 @@ export default function Weather() {
 
   return (
     <div className="Weather">
-      <div className="timeNplace">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="city"
-            autoComplete="off"
-            autoFocus="on"
-            placeholder="Enter city"
-            className="enterCity"
-            onChange={displayCity}
-          />
-          <input type="submit" name="search" className="search-button" />
-        </form>
+      <div className="grid">
+        <div className="timeNplace">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="city"
+              autoComplete="off"
+              autoFocus="on"
+              placeholder="Enter city"
+              className="enterCity"
+              onChange={displayCity}
+            />
+            <input type="submit" name="search" className="search-button" />
+          </form>
 
-        <h1>{weather.city}</h1>
-        <CurrentDate />
-      </div>
-      <div className="LocationButton">
-        <button className="location-button">Current Location</button>
-      </div>
-      <div className="CurrentTemperature">
-        <h2>
-          <img src={weather.icon} alt={weather.description} />
-          <br />
-          {weather.temperature}°<span className="celsius-temp">C</span>
-          <br />
-          <span className="description">{weather.description}</span>
-        </h2>
-      </div>
+          <h1 className="text">{weather.city}</h1>
+          <CurrentDate />
 
-      <div className="WeatherElements elements">
-        <p>
-          Humidity: {weather.humidity}% Wind: {weather.wind}km/h
-        </p>
+          <div className="LocationButton">
+            <button className="location-button">Current Location</button>
+          </div>
+        </div>
+        <div className="CurrentTemperature">
+          <h2 className="text-h2">
+            <img src={weather.icon} alt={weather.description} />
+            <br />
+            {weather.temperature}°<span className="celsius-temp">C</span>
+            <br />
+            <span className="description">{weather.description}</span>
+          </h2>
+          <div className="WeatherElements elements">
+            <p>
+              Humidity: {weather.humidity}% Wind: {weather.wind}km/h
+            </p>
+          </div>{" "}
+        </div>
+        <Card />
       </div>
     </div>
   );

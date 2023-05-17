@@ -1,45 +1,39 @@
-h1 {
+h1,
+.timeNplace p {
   text-transform: capitalize;
-
-  width: 200px;
+  margin: 20px 0 20px 20px;
+  line-height: 8px;
+}
+.text {
+  font-size: 48px;
 }
 h2 {
-  position: relative;
-  top: -170px;
-  right: -320px;
-  font-size: 42px;
-  max-width: 300px;
+  margin: 30px;
   border: 1px solid #ffe79a;
   border-radius: 50%;
   text-align: center;
-  padding: 15px 10px 50px 10px;
+  padding: 10px 5px 25px 5px;
+}
+.text-h2 {
+  font-size: 48px;
 }
 form {
   width: 200px;
-  position: relative;
-  padding-bottom: 15px;
+  margin: 20px;
+  display: flex;
+  gap: 5px;
 }
 .search-button {
   border-radius: 4px;
   background-color: #ffe79a;
   color: #212121;
   transition: all 100ms ease-in;
-  position: relative;
-  left: 200px;
-  bottom: 30px;
 }
 .search-button:hover {
   background-color: #212121;
   color: #ffe79a;
 }
-.timeNplace {
-  position: relative;
-  top: 50px;
-  padding-left: 20px;
-}
-.timeNplace p {
-  line-height: 8px;
-}
+
 .enterCity {
   background-color: #ffe79a;
 }
@@ -48,7 +42,6 @@ form {
   font-weight: lighter;
 }
 .description {
-  text-transform: capitalize;
   font-size: 18px;
   letter-spacing: 2px;
   word-spacing: 3px;
@@ -58,9 +51,7 @@ form {
   color: #212121;
   background-color: #ffe79a;
   border-radius: 4px;
-  position: relative;
-  top: 80px;
-  left: 20px;
+  margin: 120px 0 20px 20px;
   opacity: 70%;
 }
 .location-button:hover {
@@ -68,11 +59,25 @@ form {
   background-color: #212121;
   color: #ffe79a;
 }
+
+.celsius-temp {
+  font-weight: lighter;
+}
+.description {
+  font-size: 18px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+
+.grid {
+  margin-bottom: 36pxpx;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .elements {
   text-align: center;
-  position: relative;
-  bottom: 130px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 5px;
   line-height: 24px;
   border-radius: 8px;
